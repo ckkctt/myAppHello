@@ -1,0 +1,218 @@
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#app,
+.app-wrapper {
+  min-height: 100vh;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//vue router transition css
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.scale-enter-active {
+  transition: all 0.6s;
+}
+
+.scale-enter,
+.scale-leave-active {
+  transform: scale(0, 0);
+}
+
+.slider-enter-active,
+.slider-leave {
+  transition: all 0.6s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slider-enter,
+.slider-leave-active {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+// animation
+@keyframes notice-bar-infinite {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.notice-bar-play {
+  animation: notice-bar-infinite 16s linear 2s infinite;
+}
+
+//批量操作
+.select-index-toolbar {
+  font-size: 14px;
+  padding: 0 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #e2f6fe;
+  border-radius: 5px;
+  border: 1px solid #c6e2ff;
+
+  .index {
+    margin: 0 20px 0 5px;
+    color: #666;
+  }
+
+  .line {
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #409eff;
+  }
+
+  i {
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+    color: #409eff;
+  }
+}
+
+/* 全局原子css */
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.color-red {
+  color: #f56c6c;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-blue {
+  color: #409eff;
+}
+
+.decoration-underline {
+  text-decoration: underline;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bolder-text {
+  font-weight: bolder;
+}

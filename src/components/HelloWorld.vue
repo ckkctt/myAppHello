@@ -1,15 +1,40 @@
 <template>
   <div class="styelWarp">
     <div class="styelWarpTop">
-      <section @click="clickChange('vue')">vue</section>
-      <section @click="clickChange('react')">react</section>
-      <section @click="clickChange('javaScript')">javaScript</section>
-      <section @click="clickChange('elementUi')">elementUi</section>
-      <section @click="clickChange('cssHtml')">cssHtml</section>
+      <section
+        @click="clickChange('VUE')"
+        :class="activeName === 'VUE' ? 'clickStyel' : ''"
+      >
+        vue
+      </section>
+      <section
+        @click="clickChange('REACT')"
+        :class="activeName === 'REACT' ? 'clickStyel' : ''"
+      >
+        react
+      </section>
+      <section
+        @click="clickChange('JAVASCRIPT')"
+        :class="activeName === 'JAVASCRIPT' ? 'clickStyel' : ''"
+      >
+        javaScript
+      </section>
+      <section
+        @click="clickChange('ELEMENTUI')"
+        :class="activeName === 'ELEMENTUI' ? 'clickStyel' : ''"
+      >
+        elementUi
+      </section>
+      <section
+        @click="clickChange('CSSHTML')"
+        :class="activeName === 'CSSHTML' ? 'clickStyel' : ''"
+      >
+        cssHtml
+      </section>
     </div>
 
     <!-- 组件传值 -->
-    <div>
+    <div class="styelWarpBottom">
       <!--     动态组件 -->
       <keep-alive>
         <component :is="activeName" />
@@ -34,7 +59,8 @@ export default {
   },
   data () {
     return {
-      activeName: 'VUE'
+      activeName: 'VUE',
+      clickStyel: ''
     }
   },
   methods: {
@@ -45,15 +71,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .styelWarp {
-  width: 100%;
-}
-.styelWarpTop {
-  display: flex;
-  justify-content: flex-start;
-}
-section{
+  .styelWarpTop {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(240, 229, 229);
+    height: 50px;
+    line-height: 50px;
+    section {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    .clickStyel {
+       color: #1890ff;
+    }
+  }
+  .styelWarpBottom {
+    margin-top: 20px;
     margin-left: 20px;
   }
+}
 </style>

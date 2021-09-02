@@ -10,11 +10,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang='less'>
+// @import '../publicStyle/style.less';
   .App{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
     height: 100%;
+    font-size: 14px;
+    color: rgb(87, 83, 79);
   }
 </style>
