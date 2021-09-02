@@ -36,28 +36,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .vueStyelWarp {
   height: 100%;
   width: 100%;
   position: relative;
   padding: 20px;
-}
-section {
-  color: rgb(86, 151, 21);
-  cursor: pointer;
-  margin-top: 10px;
-}
-section:hover {
-  color: #13eb7f;
-}
-.el-link {
-  display: block;
-}
-.compontentStyle {
-  margin-left: 100px;
-  position: absolute;
-  top: 30px;
-  left: 30px;
+  section {
+    color: rgb(86, 151, 21);
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  section:hover {
+    color: #13eb7f;
+  }
+  .compontentStyle {
+    margin-left: 100px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
 }
 </style>
